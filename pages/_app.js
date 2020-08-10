@@ -1,7 +1,9 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+
+import CharacterContext from '../context/CharacterContext';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <CharacterContext> <Component {...pageProps} /> </CharacterContext> 
 }
 
 export default MyApp
