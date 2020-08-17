@@ -21,7 +21,10 @@ Grey dark 3: #999
   --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+  --color-grey-dark-3: #999; 
+  --color-grey-dark-4: #131217;
+  --color-grey-dark-5: #191A1F;
+}
 
 * {
   margin: 0;
@@ -46,13 +49,15 @@ body {
   color: var(--color-Grey-dark-2);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh; }
+  min-height: 100vh; 
+  background-color: var(--color-grey-dark-4);
+}
 
 .header {
   height: 7rem;
   font-size: 1.4rem;
-  background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  background-color: var(--color-grey-dark-4);
+  border-bottom: 1px solid var(--color-grey-dark-1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +78,7 @@ body {
       flex-direction: column; } }
 
 .sidebar {
-  background-color: var(--color-grey-dark-1);
+  background-color: var(--color-grey-dark-4);
   flex: 0 0 18%;
   display: flex;
   flex-direction: column;
@@ -180,7 +185,7 @@ body {
   .search__input {
     font-family: inherit;
     font-size: 1.5rem;
-    background-color: var(--color-grey-light-2);
+    background-color: #212027;
     color: inherit;
     border: none;
     padding: 0.9rem 2rem;
@@ -618,9 +623,7 @@ body {
 
 }
 
-.side-nav__li--item:active {
-  background-color: #eb2f64;
-}
+
 
 .side-nav__li--item svg {
   height: 3rem;
@@ -636,7 +639,7 @@ body {
 
 .the-main-container {
   padding: 2rem;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--color-grey-dark-5);
 }
 
 .main-header {
@@ -768,3 +771,22 @@ body {
   color: var(--color-grey-dark-2);
 }
 
+
+.github {
+  height: 1.5rem;
+}
+
+.github-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.github-link:hover {
+  color: var(--color-primary);
+      text-decoration: underline;
+}

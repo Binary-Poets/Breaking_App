@@ -1,6 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
 ## What is it?
 
 Breaking_App is an unconventional [React](https://reactjs.org/)-[Next.js](https://nextjs.org/) boilerplate app based on the Breaking Bad tv show.

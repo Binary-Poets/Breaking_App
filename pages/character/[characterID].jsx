@@ -11,6 +11,8 @@ const SingleCharacter = ({ characterID }) => {
   //getting character data
   useEffect(() => {
 
+    console.log(`Dynamic use effect triggered`);
+
     axios.get(`https://www.breakingbadapi.com/api/characters/${characterID}`).then(response => {
       setCharacter({
         name: response.data[0].name,
@@ -87,8 +89,18 @@ const SingleCharacter = ({ characterID }) => {
 export default SingleCharacter;
 
 
-SingleCharacter.getInitialProps = async ({ query }) => {
-  const { characterID } = query
+// SingleCharacter.getInitialProps = async ({ query }) => {
+//   const { characterID } = query
 
-  return { characterID }
-}
+//   console.log(`Welcome Amigo!!`);
+//   console.log(characterID)
+
+//   return { characterID }
+// }
+
+SingleCharacter.getInitialProps = (c) => {
+  return {
+    characterID: String(c.query.characterID),
+    key: String(c.query.characterID),
+  };
+};
