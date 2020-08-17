@@ -10,6 +10,11 @@ const CharacterContextFunction = ({ children }) => {
 
     //using it as useEffect Trigger + api offset value
     const [count, setCount] = useState(0);
+    const [refreshTime, setRefreshTime] = useState(5000);
+
+    useEffect(()=>{
+        refresh();
+    }, [])
 
     const refresh = () => {
         //getting all characters
@@ -33,13 +38,13 @@ const CharacterContextFunction = ({ children }) => {
     }
 
 
-    // //triggering useEffect in every n seconds
-    // useInterval(() => {
+    //triggering useEffect in every n seconds
+    useInterval(() => {
 
-    //     console.log('Ami Shamim Bhai!');
-    //     setCount(Math.floor(Math.random() * (30 - 1 + 1) + 1));
-    //     refresh();
-    // }, 10000);
+        console.log({refreshTime}, 'hello');
+        setCount(Math.floor(Math.random() * (30 - 1 + 1) + 1));
+        refresh();
+    }, refreshTime);
 
 
     function useInterval(callback, delay) {
@@ -64,7 +69,7 @@ const CharacterContextFunction = ({ children }) => {
 
 
     return (
-        <CharacterContext.Provider value={{ characters, setCharacters, refresh, searchCharacters }}>
+        <CharacterContext.Provider value={{ characters, setCharacters, refresh, searchCharacters, setRefreshTime }}>
 
             {children}
 

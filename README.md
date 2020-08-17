@@ -1,3 +1,5 @@
+🔪 See it in action: https://breaking-app.vercel.app/ 🔫
+
 ## What is it?
 
 Breaking_App is an unconventional [React](https://reactjs.org/)-[Next.js](https://nextjs.org/) boilerplate app based on the Breaking Bad tv show.

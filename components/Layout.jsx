@@ -14,7 +14,8 @@ const Layout = (props) => {
 
   //search onchange handler
   const searchOnChangeHandler = (e) => {
-
+    
+    characterContext.setRefreshTime(10000000);
     setSearchString(e.target.value);
     console.log(e.target.value);
 
@@ -26,6 +27,7 @@ const Layout = (props) => {
     e.preventDefault();
 
     characterContext.searchCharacters(searchString);
+
   }
 
   return (

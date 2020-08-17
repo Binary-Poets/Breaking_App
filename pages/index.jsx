@@ -19,31 +19,30 @@ const index = (props) => {
   const [count, setCount] = useState(0);
 
 
-  //getting all characters
-  useEffect(() => {
-    axios.get(`https://www.breakingbadapi.com/api/characters?limit=12&offset=${count}`).then(response => {
-      //console.log(response.data);
-      setCharacters(response.data);
-      characterContext.refresh();
-      console.log(characterContext.characters);
-    })
+  //getting all characters while loading
+  // useEffect(() => {
 
-    axios.get(`https://www.breakingbadapi.com/api/quote/random`).then(response => {
-      //console.log(response.data[0].quote);
-      setQuote(response.data[0].quote);
-    })
-  }, [count])
+  //   //using context api for the characters. it ain't necessary and dumb also. still using it just to demonstrate the context api
+  //   characterContext.refresh();
+  //   console.log(characterContext.characters);
 
 
-  // //triggering useEffect in every n seconds
-  // useInterval(() => {
+  //   axios.get(`https://www.breakingbadapi.com/api/quote/random`).then(response => {
+  //     //console.log(response.data[0].quote);
+  //     setQuote(response.data[0].quote);
+  //   });
+  // }, [count])
 
-  //   console.log('Ami Shamim Bhai!');
-  //   setCount(Math.floor(Math.random() * 10));
-  // }, 5000);
+
+  //triggering useEffect in every n seconds to get new quote from the api
+  useInterval(() => {
+
+    console.log('Ami Shamim Bhai!');
+    setCount(Math.floor(Math.random() * 10));
+  }, 5000);
 
 
-  function useInterval(callback, delay) {
+    function useInterval(callback, delay) {
     const savedCallback = useRef();
 
     // Remember the latest callback.
