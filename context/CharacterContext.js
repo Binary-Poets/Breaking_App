@@ -11,6 +11,7 @@ const CharacterContextFunction = ({ children }) => {
     //using it as useEffect Trigger + api offset value
     const [count, setCount] = useState(4);
     const [refreshTime, setRefreshTime] = useState(5000);
+    const [refreshCount, setRefreshCount] = useState(0);
 
     useEffect(()=>{
         refresh();
@@ -38,12 +39,20 @@ const CharacterContextFunction = ({ children }) => {
     }
 
 
+
     //triggering useEffect in every n seconds
     useInterval(() => {
 
-        console.log({refreshTime}, 'hello');
+        if(refreshCount > 5) {
+            setRefreshTime(1000000);
+        } 
+
+        console.log({refreshTime}, {refreshCount}, 'hello');
         setCount(Math.floor(Math.random() * (30 - 1 + 1) + 1));
         refresh();
+
+        setRefreshCount(refreshCount => refreshCount + 1);
+
     }, refreshTime);
 
 
