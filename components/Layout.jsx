@@ -57,7 +57,7 @@ const Layout = (props) => {
           </div>
 
           <form onSubmit={searchSubmitHandler} className="search">
-            <input onChange={searchOnChangeHandler} className="search__input" type="text" name="searchString" id placeholder="Search what you're thinking" />
+            <input onChange={searchOnChangeHandler} className="search__input" type="text" name="searchString" id placeholder="Search your favorite character here..." />
             <button type="submit" className="search__button">
               {/* <svg className="search__icon">
                   <use xlinkHref="img/sprite.svg#icon-magnifying-glass" />
@@ -67,17 +67,10 @@ const Layout = (props) => {
 
           <nav className="user-nav">
             <div className="user-nav__icon-box">
-              <svg className="user-nav__icon" viewBox="0 0 24 24" width={24} height={24} stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                </path>
-              </svg>
-              <span className="user-nav__notification">3</span>
-            </div>
-            <div className="user-nav__icon-box">
               <svg className="user-nav__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell-on" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                 <path fill="currentColor" d="M112,192a24,24,0,0,0-24-24H24a24,24,0,0,0,0,48H88A24,24,0,0,0,112,192ZM51.66,64.78l55.42,32a24,24,0,1,0,24-41.56l-55.42-32a24,24,0,1,0-24,41.56ZM520.94,100a23.8,23.8,0,0,0,12-3.22l55.42-32a24,24,0,0,0-24-41.56l-55.42,32a24,24,0,0,0,12,44.78ZM320,512a64,64,0,0,0,64-64H256A64,64,0,0,0,320,512ZM616,168H552a24,24,0,0,0,0,48h64a24,24,0,0,0,0-48ZM479.92,208c0-77.69-54.48-139.91-127.94-155.16V32a32,32,0,1,0-64,0V52.84C214.56,68.09,160.08,130.31,160.08,208c0,102.31-36.14,133.53-55.47,154.28A31.28,31.28,0,0,0,96,384c.11,16.41,13,32,32.09,32H511.91c19.11,0,32-15.59,32.09-32a31.23,31.23,0,0,0-8.61-21.72C516.06,341.53,479.92,310.31,479.92,208Z" className />
               </svg>
-              <span className="user-nav__notification">69</span>
+              <span className="env-1">I Am a <span className="env-2">{process.env.dummyENV}</span> </span>
             </div>
 
           </nav>

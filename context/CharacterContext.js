@@ -9,7 +9,7 @@ const CharacterContextFunction = ({ children }) => {
     const [characters, setCharacters] = useState([]);
 
     //using it as useEffect Trigger + api offset value
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(4);
     const [refreshTime, setRefreshTime] = useState(5000);
 
     useEffect(()=>{

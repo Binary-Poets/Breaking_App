@@ -19,19 +19,14 @@ const index = (props) => {
   const [count, setCount] = useState(0);
 
 
-  //getting all characters while loading
-  // useEffect(() => {
+  //getting quotes from the api
+  useEffect(() => {
 
-  //   //using context api for the characters. it ain't necessary and dumb also. still using it just to demonstrate the context api
-  //   characterContext.refresh();
-  //   console.log(characterContext.characters);
-
-
-  //   axios.get(`https://www.breakingbadapi.com/api/quote/random`).then(response => {
-  //     //console.log(response.data[0].quote);
-  //     setQuote(response.data[0].quote);
-  //   });
-  // }, [count])
+    axios.get(`https://www.breakingbadapi.com/api/quote/random`).then(response => {
+      //console.log(response.data[0].quote);
+      setQuote(response.data[0].quote);
+    });
+  }, [count])
 
 
   //triggering useEffect in every n seconds to get new quote from the api

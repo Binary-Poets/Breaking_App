@@ -794,3 +794,14 @@ body {
   color: var(--color-primary);
       text-decoration: underline;
 }
+
+
+.env-1 {
+  color: var(--color-grey-light-4);
+  margin-left: 1rem;
+}
+
+.env-2 {
+  color: var(--color-primary);
+  font-weight: 700;
+}

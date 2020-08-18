@@ -57,7 +57,7 @@ const SingleCharacter = ({ characterID }) => {
             </div>
             <div className="character-detail">
               <span className="character-detail-1">Occupation: </span>
-              <span style={{fontSize: "1.2rem"}} className="character-detail-2">The {
+              <span style={{fontSize: "2rem"}} className="character-detail-2">The {
                 character.occupation.map(occupation=>{
                   return `${occupation} . `;
                 })
