@@ -30,6 +30,10 @@ const Layout = (props) => {
 
   }
 
+  const triggerSearch = () =>{
+    router.push('/');
+  }
+
   return (
     <>
       <Head>
@@ -57,7 +61,7 @@ const Layout = (props) => {
           </div>
 
           <form onSubmit={searchSubmitHandler} className="search">
-            <input onChange={searchOnChangeHandler} className="search__input" type="text" name="searchString" id placeholder="Search your favorite character here..." />
+            <input onClick={triggerSearch} onChange={searchOnChangeHandler} className="search__input" type="text" name="searchString" id placeholder="Search your favorite character here..." />
             <button type="submit" className="search__button">
               {/* <svg className="search__icon">
                   <use xlinkHref="img/sprite.svg#icon-magnifying-glass" />

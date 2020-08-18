@@ -17,6 +17,7 @@ useState Hook
 useContext Hook
 useEffect Hook
 content refresh interval with useEffect
+next.config.js and env variables
 ```
 
 
